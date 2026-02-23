@@ -31,7 +31,6 @@ As well as this being a great practical project, this assignment is also an intr
    Review your own PR (as if you were a teammate), then **merge** it yourself.  
    After merging, pull the latest `main` locally so your branch is up to date.
 
--- 
 
 ## Part 2: Implement the Snake Game
 
@@ -63,6 +62,7 @@ OR
 python3 snek.py
 ```
 
+---
 
 ## Notes
 
