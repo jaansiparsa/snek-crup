@@ -4,7 +4,36 @@ Build a terminal Snake game in Python and practice Git workflow in **your own re
 
 ---
 
-## Part 1: Implement the Snake Game
+## Part 1: Git Workflow (Intro to Git)
+
+As well as this being a great practical project, this assignment is also an introduction to Git. **Work in your own fork** (don’t push to the original assignment repo). Follow these steps:
+
+1. **Fork the repo** (do this first):  
+   On GitHub (or GitLab), fork this assignment repo to your account—or to your team’s org if you’re working as a group. All work (commits, branches, PRs) happens in **your fork**, not the original repo.
+
+2. **Clone your fork**:
+   ```bash
+   git clone <your-fork-url>
+   cd snek
+   ```
+
+3. **Make at least 3 commits** as you implement the game (or fix bugs, refactor, etc.).  
+   - Use clear, descriptive commit messages (e.g. “Add snake movement and direction handling”, “Implement grid rendering”, “Handle game over on wall collision”).  
+   - Commit logical units of work, not huge dumps of code.
+
+4. **Good PR etiquette — open a Pull Request:**
+   - Create a **branch** for your work (e.g. `git checkout -b feature/snake-game`).
+   - Push your branch and open a **Pull Request** from your branch into `main` (or the default branch) **in your fork**.
+   - Write a short PR description: what you implemented, any known limitations, and how to run the game.
+   - Keep the PR focused (e.g. “Implement Snake game” or “Add game over logic”).
+
+5. **Self-merge:**  
+   Review your own PR (as if you were a teammate), then **merge** it yourself.  
+   After merging, pull the latest `main` locally so your branch is up to date.
+
+-- 
+
+## Part 2: Implement the Snake Game
 
 Complete the `SnakeGame` class in `snek.py` so that:
 
@@ -33,34 +62,6 @@ OR
 ```bash
 python3 snek.py
 ```
----
-
-## Part 2: Git Workflow (Intro to Git)
-
-This assignment is also an introduction to Git. **Work in your own fork** (don’t push to the original assignment repo). Follow these steps:
-
-1. **Fork the repo** (do this first):  
-   On GitHub (or GitLab), fork this assignment repo to your account—or to your team’s org if you’re working as a group. All work (commits, branches, PRs) happens in **your fork**, not the original repo.
-
-2. **Clone your fork**:
-   ```bash
-   git clone <your-fork-url>
-   cd snek
-   ```
-
-3. **Make at least 3 commits** as you implement the game (or fix bugs, refactor, etc.).  
-   - Use clear, descriptive commit messages (e.g. “Add snake movement and direction handling”, “Implement grid rendering”, “Handle game over on wall collision”).  
-   - Commit logical units of work, not huge dumps of code.
-
-4. **Good PR etiquette — open a Pull Request:**
-   - Create a **branch** for your work (e.g. `git checkout -b feature/snake-game`).
-   - Push your branch and open a **Pull Request** from your branch into `main` (or the default branch) **in your fork**.
-   - Write a short PR description: what you implemented, any known limitations, and how to run the game.
-   - Keep the PR focused (e.g. “Implement Snake game” or “Add game over logic”).
-
-5. **Self-merge:**  
-   Review your own PR (as if you were a teammate), then **merge** it yourself.  
-   After merging, pull the latest `main` locally so your branch is up to date.
 
 ---
 
