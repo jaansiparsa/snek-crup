@@ -28,7 +28,11 @@ The main loop in `game_loop()` is already set up: it creates a 25×15 game, read
 ```bash
 python snek.py
 ```
+OR 
 
+```bash
+python3 snek.py
+```
 ---
 
 ## Part 2: Git Workflow (Intro to Git)
