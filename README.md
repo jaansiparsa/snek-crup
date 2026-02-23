@@ -63,7 +63,6 @@ OR
 python3 snek.py
 ```
 
----
 
 ## Notes
 
