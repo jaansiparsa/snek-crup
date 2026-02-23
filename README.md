@@ -82,5 +82,6 @@ This assignment is also an introduction to Git. **Work in your own fork** (donâ€
 - [ ] Make at least 3 commits with clear messages
 - [ ] Create a branch and open a Pull Request (in your fork) with a short description
 - [ ] Self-merge the PR and pull latest `main`
+- [ ] Include a link to your repo in the .txt file you submit to Gradescope!
 
 Happy coding!
