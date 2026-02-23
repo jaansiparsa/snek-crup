@@ -1,6 +1,6 @@
 # Snek — Assignment
 
-Build a terminal Snake game in Python and practice Git workflow (clone, commits, pull request, self-merge).
+Build a terminal Snake game in Python and practice Git workflow in **your own repo** (clone, commits, pull request, self-merge).
 
 ---
 
@@ -33,25 +33,28 @@ python snek.py
 
 ## Part 2: Git Workflow (Intro to Git)
 
-This assignment is also an introduction to Git. Follow these steps:
+This assignment is also an introduction to Git. **Work in your own fork** (don’t push to the original assignment repo). Follow these steps:
 
-1. **Clone the repo** (if you haven’t already):
+1. **Fork the repo** (do this first):  
+   On GitHub (or GitLab), fork this assignment repo to your account—or to your team’s org if you’re working as a group. All work (commits, branches, PRs) happens in **your fork**, not the original repo.
+
+2. **Clone your fork**:
    ```bash
-   git clone <repo-url>
+   git clone <your-fork-url>
    cd snek
    ```
 
-2. **Make at least 3 commits** as you implement the game (or fix bugs, refactor, etc.).  
+3. **Make at least 3 commits** as you implement the game (or fix bugs, refactor, etc.).  
    - Use clear, descriptive commit messages (e.g. “Add snake movement and direction handling”, “Implement grid rendering”, “Handle game over on wall collision”).  
    - Commit logical units of work, not huge dumps of code.
 
-3. **Good PR etiquette — open a Pull Request:**
+4. **Good PR etiquette — open a Pull Request:**
    - Create a **branch** for your work (e.g. `git checkout -b feature/snake-game`).
-   - Push your branch and open a **Pull Request** from your branch into `main` (or the default branch).
+   - Push your branch and open a **Pull Request** from your branch into `main` (or the default branch) **in your fork**.
    - Write a short PR description: what you implemented, any known limitations, and how to run the game.
    - Keep the PR focused (e.g. “Implement Snake game” or “Add game over logic”).
 
-4. **Self-merge:**  
+5. **Self-merge:**  
    Review your own PR (as if you were a teammate), then **merge** it yourself.  
    After merging, pull the latest `main` locally so your branch is up to date.
 
@@ -73,10 +76,11 @@ This assignment is also an introduction to Git. Follow these steps:
 
 ## Summary Checklist
 
-- [ ] Clone the repository
+- [ ] Fork the assignment repo
+- [ ] Clone **your fork**
 - [ ] Implement `SnakeGame` so the game runs (initial state, controls, grid, step, game over)
 - [ ] Make at least 3 commits with clear messages
-- [ ] Create a branch and open a Pull Request with a short description
+- [ ] Create a branch and open a Pull Request (in your fork) with a short description
 - [ ] Self-merge the PR and pull latest `main`
 
 Happy coding!
