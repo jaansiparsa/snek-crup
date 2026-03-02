@@ -14,12 +14,19 @@ class SnakeGame:
         - Snake in the center
         """
         self.length = 3
-        self.gameGrid = [[0 for _ in range(width)] for _ in range(height)]
+        self.gameGrid = [["0" for _ in range(width)] for _ in range(height)]
         self.width = width
         self.height = height
         self.direction = "d"
-        self.snakeRight = width//2
-        self.snakeDown = height//2
+        self.center_x = width//2
+        self.center_y = height//2
+        self.snake = [
+        (self.center_y, self.center_x),
+        (self.center_y, self.center_x - 1),
+        (self.center_y, self.center_x - 2),
+        ]
+        for y, x in self.snake:
+            self.gameGrid[y][x] = "s"
 
 
     def grid(self) -> list[list[str]]:
@@ -27,21 +34,26 @@ class SnakeGame:
         Handles the display of the grid
         Should return a 2D list of characters
         """
-        return []
+        return self.gameGrid
 
     def set_direction(self, key_input: Optional[str]):
         """
         Set the direction.
         Assume input will either be w, a, s, d, or None
         """
-        pass
+        if key_input in ["w", "a", "s", "d"]:
+            self.direction = key_input
 
     def do_step(self) -> bool:
         """
         Performs a single step during 1 tick
         Return False if the game should end
         """
-        return True
+        if (self.direction == "w") {
+            if(not snakeDown -1 <0) {
+                gameGrid[snakeD]
+            }
+        }
 
 
 def game_loop(stdscr):
