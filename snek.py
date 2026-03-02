@@ -49,11 +49,30 @@ class SnakeGame:
         Performs a single step during 1 tick
         Return False if the game should end
         """
-        if (self.direction == "w") {
-            if(not snakeDown -1 <0) {
-                gameGrid[snakeD]
-            }
-        }
+        head_y, head_x = self.snake[0]
+
+        if self.direction == "w":
+            new_head = (head_y - 1, head_x)
+        elif self.direction == "s":
+            new_head = (head_y + 1, head_x)
+        elif self.direction == "a":
+            new_head = (head_y, head_x - 1)
+        elif self.direction == "d":
+            new_head = (head_y, head_x + 1)
+        else:
+            return True  
+
+        new_y, new_x = new_head
+
+        if new_y < 0 or new_y >= self.height or new_x < 0 or new_x >= self.width or new_head in self.snake:
+            return False
+
+        self.snake.insert(0, new_head)  
+        self.snake.pop() 
+        self.gameGrid = [["0" for _ in range(self.width)] for _ in range(self.height)]
+        for y, x in self.snake:
+            self.gameGrid[y][x] = "s"
+        return True
 
 
 def game_loop(stdscr):
