@@ -15,11 +15,16 @@ class SnakeGame:
         self.next_dy = 0
 
     def grid(self) -> list[list[str]]:
-        g = [[" " for _ in range(self.w)] for _ in range(self.h)]
+        out = []
+        out.append(["+"] + ["-"] * self.w + ["+"])
+        inner = [[" " for _ in range(self.w)] for _ in range(self.h)]
         for y, x in self.body:
             if 0 <= y < self.h and 0 <= x < self.w:
-                g[y][x] = "#"
-        return g
+                inner[y][x] = "#"
+        for row in inner:
+            out.append(["|"] + row + ["|"])
+        out.append(["+"] + ["-"] * self.w + ["+"])
+        return out
 
     def set_direction(self, key_input: Optional[str]):
         if key_input == "d":
