@@ -34,7 +34,18 @@ class SnakeGame:
         Handles the display of the grid
         Should return a 2D list of characters
         """
-        return []
+        board = []
+
+        for y in range(self.height):
+            row = []
+            for x in range(self.width):
+                if (x, y) in self.snake:
+                    row.append("O")
+                else:
+                    row.append(" ")
+            board.append(row)
+
+        return board
 
     def set_direction(self, key_input: Optional[str]):
         """
@@ -58,18 +69,44 @@ class SnakeGame:
         if new_direction is None:
             return
 
-    # Prevent reversing direction
-    dx, dy = self.direction
-    ndx, ndy = new_direction
+        # Prevent reversing direction
+        dx, dy = self.direction
+        ndx, ndy = new_direction
 
-    if (dx + ndx, dy + ndy) != (0, 0):
-        self.direction = new_direction
+        if (dx + ndx, dy + ndy) != (0, 0):
+            self.direction = new_direction
 
     def do_step(self) -> bool:
         """
         Performs a single step during 1 tick
         Return False if the game should end
         """
+
+        if not self.alive:
+            return False
+
+        head_x, head_y = self.snake[-1]
+        dx, dy = self.direction
+
+        new_head = (head_x + dx, head_y + dy)
+
+        # Check wall collisio
+        if (
+            new_head[0] < 0
+            or new_head[0] >= self.width
+            or new_head[1] < 0
+            or new_head[1] >= self.height
+        ):
+            self.alive = False
+            return False
+
+        if new_head in self.snake:
+            self.alive = False
+            return False
+
+        self.snake.append(new_head)
+        self.snake.pop(0)
+
         return True
 
 
